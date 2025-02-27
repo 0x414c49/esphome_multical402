@@ -29,6 +29,8 @@ const unsigned int registerIds[] = {
 
 class KMP {
  public:
+  KMP() = default;
+  
   void setup(uart::UARTDevice *parent) {
     _uart = parent;
   }
@@ -70,7 +72,7 @@ class KMP {
   float get_volume() { return Volume(); }
   
  protected:
-  uart::UARTDevice *_uart;
+  uart::UARTDevice *_uart{nullptr};
   
   // kamReadReg - read a Kamstrup register
   float Read(unsigned int registerId);

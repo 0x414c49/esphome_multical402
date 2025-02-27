@@ -11,8 +11,13 @@ esphome:
   # No need to include files anymore as we're using a proper component
 
 external_components:
-  - source: components
+  - source: github://0x414c49/esphome_multical402@main
     components: [multical402]  
+
+### this is for local development
+#external_components:
+#  - source: components
+#    components: [multical402]      
 
 # Enable features
 ota:
