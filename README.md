@@ -66,11 +66,9 @@ uart:
 The code will run every 10 seconds. This can be changed here:
 
 ```yaml
-custom_component:
-  - lambda: |-
-      auto multical402 = new Multical402(
-        10000,      <-- Specify update interval in milliseconds
-        ...
+multical402:
+  id: multical_meter
+  update_interval: 10s # update it here
 ```
 
 ### Sensors
@@ -89,7 +87,7 @@ The code (`kmp.h`) can be changed to read other registers, but that is outside t
 
 ### Unit of Measurement
 
-Make sure to specify the unit of measurement on the sensors to match the value from the meter (eg. **Wh** vs **kWh** vs **MWh**).
+Make sure to specify the unit of measurement on the sensors to match the value from the meter (eg. **Wh** vs **kWh** vs **MWh** vs **GJ**).
 
 ```yaml
 sensors:
